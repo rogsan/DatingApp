@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 
 import { AuthService } from './shared/services/auth.service';
 import { ValueService } from './shared/services/value.service';
+import { ErrorInterceptorProvider } from './shared/interceptors/error.interceptor';
 
 @NgModule({
    declarations: [
@@ -24,7 +25,9 @@ import { ValueService } from './shared/services/value.service';
       FormsModule
    ],
    providers: [
-      AuthService, ValueService
+      AuthService,
+      ValueService,
+      ErrorInterceptorProvider
    ],
    bootstrap: [
       AppComponent
