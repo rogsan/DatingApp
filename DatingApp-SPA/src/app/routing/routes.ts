@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from '../home/home.component';
 import { MemberListComponent } from '../members/member-list/member-list.component';
 import { MemberDetailComponent } from '../members/member-detail/member-detail.component';
+import { MemberEditComponent } from '../members/member-edit/member-edit.component';
 import { MessagesComponent } from '../messages/messages.component';
 import { ListsComponent } from '../lists/lists.component';
 
@@ -29,6 +30,10 @@ export const appRoutes: Routes = [
             path: 'members/:id',
             component: MemberDetailComponent,
             resolve: { user: MemberDetailResolver }
+         },
+         {
+            path: 'profile',
+            component: MemberEditComponent
          },
          {
             path: 'messages',
